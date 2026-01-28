@@ -1,0 +1,138 @@
+:root {
+  --bg: #f7f4ef;
+  --ink: #1f1a14;
+  --muted: #6b5f55;
+  --accent: #dd6b3d;
+  --panel: #fffaf3;
+  --line-user: #e9f2ff;
+  --line-assistant: #fff1e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  color: var(--ink);
+  background: radial-gradient(1200px 800px at 80% -10%, #ffe9d6 0%, transparent 60%),
+              radial-gradient(900px 700px at -20% 20%, #e6f0ff 0%, transparent 50%),
+              var(--bg);
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 32px auto;
+  padding: 24px;
+}
+
+header {
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.sub {
+  margin: 0;
+  color: var(--muted);
+}
+
+.log {
+  min-height: 320px;
+  max-height: 55vh;
+  overflow-y: auto;
+  background: var(--panel);
+  border: 1px solid #eadfd3;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 24px rgba(31, 26, 20, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.line {
+  padding: 8px 12px;
+  border-radius: 14px;
+  font-size: 15px;
+  max-width: 80%;
+  line-height: 1.5;
+}
+
+.line.user {
+  background: var(--line-user);
+  border-right: 4px solid #7fb1ff;
+  align-self: flex-end;
+  text-align: left;
+}
+
+.line.assistant {
+  background: var(--line-assistant);
+  border-left: 4px solid var(--accent);
+  align-self: flex-start;
+}
+
+footer {
+  margin-top: 16px;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e2d6c9;
+  font-size: 15px;
+  background: #fff;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #e2d6c9;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    margin: 12px auto;
+    padding: 16px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+}

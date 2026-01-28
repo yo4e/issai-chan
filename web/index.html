@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1さいちゃん</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>1さいちゃん</h1>
+      <p class="sub">超ミニLM / ローカル学習</p>
+    </header>
+
+    <main>
+      <div id="log" class="log" aria-live="polite"></div>
+    </main>
+
+    <footer>
+      <form id="form">
+        <input id="input" type="text" placeholder="はなす…" autocomplete="off" />
+        <button id="send" type="submit">送信</button>
+      </form>
+      <div class="actions">
+        <button id="reset-soft" type="button">Reset（ソフト）</button>
+        <button id="reset-hard" type="button">Reset（ハード）</button>
+        <button id="rebuild" type="button" class="hidden">Rebuild vocab</button>
+      </div>
+      <p class="hint">Rebuild vocabは ?debug=1 で表示</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
